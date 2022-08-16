@@ -1,4 +1,6 @@
-FROM quay.io/openshift/origin-cli:4.10
+FROM quay.io/openshift/origin-cli:v3.11
+
+RUN yum install -y gettext
 
 COPY main.sh main.sh
 COPY auto-import-secret.yaml auto-import-secret.yaml
